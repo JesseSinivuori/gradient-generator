@@ -23,20 +23,20 @@ cd ./gradient-generator
 ### 3. Install
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### 4.
 ### Run development server
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 #### or
 ### Build and run the production build
 ```bash
-npm run build
-npm run start
+pnpm run build
+pnpm run start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
