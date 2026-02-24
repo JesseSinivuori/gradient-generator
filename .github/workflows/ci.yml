@@ -13,17 +13,22 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
-          cache: "npm"
+          node-version: 24
+          cache: "pnpm"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
 
       - name: Install Dependencies
-        run: npm install
+        run: pnpm install --frozen-lockfile
 
       - name: Typecheck
-        run: npm run typecheck
+        run: pnpm run typecheck
 
       - name: Lint
-        run: npm run lint
+        run: pnpm run lint
 
       - name: Print Environment Variable
         run: echo $MY_ENV_VAR
